@@ -1,0 +1,3 @@
+2024-01-25 13:39:49 - 44d88612fea8a8f36de82e1278abb02f - Harmless: 0, Suspicious: 0, Malicious: 63, Undetected: 3
+2024-01-25 13:39:49 - fe7c18df2a2511fbb18b39f604131ff4 - Harmless: 0, Suspicious: 0, Malicious: 53, Undetected: 17
+2024-01-25 13:39:50 - 35c16888bdda9dd254a978d3a7c9814e - Harmless: 0, Suspicious: 0, Malicious: 53, Undetected: 16
