@@ -16,10 +16,11 @@ def main():
 			current_datetime = datetime.datetime.now()
 			formatted_datetime = current_datetime.strftime("[%d/%b/%Y:%H:%M:%S]")
 			file = client.get_object("/files/"+hash)
-			filename =  file.names[0]
-			info = file.antiy_info
+			if len(file.names) != 0:
+				filename =  file.names[0]
+			else: filename = "NoName"
 			results = file.last_analysis_stats
-			log_entry = f"{formatted_datetime} {filename} - {info} - {hash} - Harmless: {results['harmless']}, Suspicious: {results['suspicious']}, Malicious: {results['malicious']}, Undetected: {results['undetected']}\n"
+			log_entry = f"{formatted_datetime} {filename} - {hash} - Harmless: {results['harmless']}, Suspicious: {results['suspicious']}, Malicious: {results['malicious']}, Undetected: {results['undetected']}\n"
 			with open("log.txt", 'r+') as log:
 				if hash not in log.read():
 					log.write(log_entry)
